@@ -1,0 +1,256 @@
+[
+    {
+        "time": 0,
+        "type": "INITIAL",
+        "node": "iot_0",
+        "location": "cluster_2"
+    },
+    {
+        "time": 0,
+        "type": "INITIAL",
+        "node": "iot_1",
+        "location": "cluster_2"
+    },
+    {
+        "time": 0,
+        "type": "INITIAL",
+        "node": "iot_2",
+        "location": "cluster_2"
+    },
+    {
+        "time": 0,
+        "type": "INITIAL",
+        "node": "iot_3",
+        "location": "cluster_2"
+    },
+    {
+        "time": 0,
+        "type": "INITIAL",
+        "node": "iot_4",
+        "location": "cluster_2"
+    },
+    {
+        "time": 35,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_2",
+        "to": "cluster_3",
+        "status": "NORMAL"
+    },
+    {
+        "time": 90,
+        "type": "MOVE",
+        "node": "iot_0",
+        "from": "cluster_2",
+        "to": "cluster_3",
+        "status": "NORMAL"
+    },
+    {
+        "time": 120,
+        "type": "REKEY",
+        "seed": "uFKwoSbq",
+        "key": "1d28bdbb"
+    },
+    {
+        "time": 123,
+        "type": "MOVE",
+        "node": "iot_4",
+        "from": "cluster_2",
+        "to": "cluster_1",
+        "status": "NORMAL"
+    },
+    {
+        "time": 170,
+        "type": "MOVE",
+        "node": "iot_3",
+        "from": "cluster_2",
+        "to": "cluster_1",
+        "status": "NORMAL"
+    },
+    {
+        "time": 223,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_3",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 240,
+        "type": "REKEY",
+        "seed": "SnW1hwxW",
+        "key": "4473bc7e"
+    },
+    {
+        "time": 260,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_1",
+        "to": "cluster_3",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 296,
+        "type": "MOVE",
+        "node": "iot_0",
+        "from": "cluster_3",
+        "to": "cluster_2",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 348,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_3",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 360,
+        "type": "REKEY",
+        "seed": "NRx75XkK",
+        "key": "a03815a1"
+    },
+    {
+        "time": 393,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_1",
+        "to": "cluster_2",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 431,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_2",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 480,
+        "type": "REKEY",
+        "seed": "Of8Q1L2M",
+        "key": "9b059486"
+    },
+    {
+        "time": 485,
+        "type": "MOVE",
+        "node": "iot_2",
+        "from": "cluster_2",
+        "to": "cluster_3",
+        "status": "NORMAL"
+    },
+    {
+        "time": 544,
+        "type": "MOVE",
+        "node": "iot_0",
+        "from": "cluster_2",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 582,
+        "type": "MOVE",
+        "node": "iot_0",
+        "from": "cluster_1",
+        "to": "cluster_3",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 600,
+        "type": "REKEY",
+        "seed": "TBggpAAj",
+        "key": "29fa1b0d"
+    },
+    {
+        "time": 617,
+        "type": "MOVE",
+        "node": "iot_0",
+        "from": "cluster_3",
+        "to": "cluster_2",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 649,
+        "type": "MOVE",
+        "node": "iot_4",
+        "from": "cluster_1",
+        "to": "cluster_2",
+        "status": "NORMAL"
+    },
+    {
+        "time": 684,
+        "type": "MOVE",
+        "node": "iot_4",
+        "from": "cluster_2",
+        "to": "cluster_3",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 720,
+        "type": "REKEY",
+        "seed": "o95j2G9W",
+        "key": "164c3382"
+    },
+    {
+        "time": 743,
+        "type": "MOVE",
+        "node": "iot_2",
+        "from": "cluster_3",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 791,
+        "type": "MOVE",
+        "node": "iot_3",
+        "from": "cluster_1",
+        "to": "cluster_3",
+        "status": "NORMAL"
+    },
+    {
+        "time": 840,
+        "type": "REKEY",
+        "seed": "g4TLE7Bx",
+        "key": "5f0b2e07"
+    },
+    {
+        "time": 843,
+        "type": "MOVE",
+        "node": "iot_4",
+        "from": "cluster_3",
+        "to": "cluster_1",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 882,
+        "type": "MOVE",
+        "node": "iot_3",
+        "from": "cluster_3",
+        "to": "cluster_2",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 915,
+        "type": "MOVE",
+        "node": "iot_1",
+        "from": "cluster_1",
+        "to": "cluster_2",
+        "status": "NORMAL"
+    },
+    {
+        "time": 949,
+        "type": "MOVE",
+        "node": "iot_2",
+        "from": "cluster_1",
+        "to": "cluster_2",
+        "status": "ATTACKER"
+    },
+    {
+        "time": 960,
+        "type": "REKEY",
+        "seed": "ST9ynILU",
+        "key": "70326fd1"
+    }
+]

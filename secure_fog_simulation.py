@@ -12,6 +12,12 @@ from yafs.placement import JSONPlacement
 from yafs.selection import First_ShortestPath
 from yafs.distribution import deterministic_distribution, uniformDistribution
 from yafs.population import Population
+from simulation_core.attack_scenarios import AttackScenarioController
+from ai_integration.ai_detector import AIDetector
+from simulation_core.movement_manager import MovementManager, AI_Monitor
+from simulation_core.rekey_manager import RekeyingManager
+from ai_integration.ai_detector import AIDetector
+
 
 # --- Security & Helper Functions ---
 
@@ -144,12 +150,9 @@ class RekeyingManager:
         # This monitor just handles the logic/logging part of the event.
         self.logger.info(f"TIME: {sim.env.now:.2f} - Rekeying process initiated.")
 
-# --- Main Simulation Setup ---
 
-def run_simulation():
-    # Setup Python's logging
-    logging.basicConfig(level=logging.INFO, format='%(message)s')
-
+def create_topology_and_app_and_placement():
+    """Creates and returns the topology, application, and placement objects."""
     # 1. Create the Fog Topology
     topo = Topology()
     
@@ -199,6 +202,16 @@ def run_simulation():
         ]
     })
 
+    return topo, app, placement
+
+
+# --- Main Simulation Setup ---
+
+def run_simulation():
+    # Setup Python's logging
+    logging.basicConfig(level=logging.INFO, format='%(message)s')
+    topo, app, placement = create_topology_and_app_and_placement()
+
     # 4. Define Population (required by YAFS, even if empty)
     population = Population("EmptyPopulation")
 
@@ -236,6 +249,16 @@ def run_simulation():
     rekey_dist = deterministic_distribution(name="RekeyDist", time=120)
     sim.deploy_monitor("RekeyingManager", rekeying_manager, rekey_dist)
 
+    # Initialize AttackScenarioController
+    attack_controller = AttackScenarioController(sim,ai_monitor)
+
+    # Trigger scenario manually or programmatically
+   # Schedule attacks dynamically
+    for time in range(200, 1000, 200):
+        sim.deploy_monitor(f"Attack_{time}", attack_controller.trigger_frequent_movement, deterministic_distribution(name=f"AttackDist_{time}", time=time))
+
+    # You can later switch to GUI/Dashboard button to trigger any scenario dynamically.
+
     # 7. Run the simulation
     simulation_duration = 1000  # Run for 1000 time units
     logging.info(f"Running simulation for {simulation_duration} seconds...")
@@ -245,6 +268,7 @@ def run_simulation():
     with open("simulation_log.json", "w") as f:
         json.dump(simulation_log, f, indent=4)
     logging.info("Simulation finished. Event log saved to simulation_log.json")
+
 
 
 if __name__ == '__main__':
